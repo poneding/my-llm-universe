@@ -4,10 +4,9 @@ from dotenv import find_dotenv, load_dotenv
 from langchain_chroma import Chroma
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 from langchain_zhipuai_dev.chat import ChatZhipuAI
+from langchain_zhipuai_dev.embedding import ZhipuAIEmbeddings
 from pydantic import SecretStr
 from zhipuai import ZhipuAI
-
-from zhipuai_embedding import ZhipuAIEmbeddings
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 ZHIPUAI_API_KEY = os.getenv("ZHIPUAI_API_KEY")
@@ -38,5 +37,5 @@ def get_chat_model():
 
     # ZhipuAI Chat Model，不支持 RunnableParallel 运算
     return ChatZhipuAI(
-        api_key=os.getenv("ZHIPUAI_API_KEY"), model="glm-4", temperature=0
+        api_key=os.getenv("ZHIPUAI_API_KEY"), model="glm-4-plus", temperature=0
     )
