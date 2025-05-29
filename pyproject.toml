@@ -10,6 +10,7 @@ dependencies = [
     "langchain-community>=0.3.24",
     "langchain-google-genai>=2.1.4",
     "langchain-text-splitters>=0.3.8",
+    "langchain-zhipuai-dev>=0.2.1",
     "loguru>=0.7.3",
     "markdown>=3.8",
     "pydantic>=2.11.5",
